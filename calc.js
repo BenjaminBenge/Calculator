@@ -14,33 +14,69 @@ function display(pig){
 
 let firstNumber = document.getElementById('result').value;
 
-let operator = ["+","-","*","/"];
+let y = 
+
+/* let x = operate() */
+/* 
+let operator = ["+","-","*","/"]; */
 
 
+//A function to hold the second number
 
+function secondNumber(){
+
+    let k = document.getElementById('result').value;
+}
 
 //writing operator functions
+//operate function calling the operator functions
+
+function operate(){
+
+    add1();
+   /*  subtract();
+    multiply();
+    divide(); */
+
+}   
+
+//call second variable
+
+
+function add1(){
+    firstNumber
+}
 
 function add(firstNumber,secondNumber){
+
+    secondNumber();
     
     return firstNumber + secondNumber;
 
-    document.getElementById('result').value;
+// if the operator is pressed again, calculate the result of trhe previosd two
+
+   
 
 
 }
 
 function subtract(firstNumber,secondNumber){
 
+    secondNumber();
+
     return firstNumber-secondNumber;
 }
 
 function multiply(firstNumber,secondNumber){
 
+    secondNumber();
+
     return firstNumber*secondNumber;
 }
 
 function divide(firstNumber,secondNumber){
+
+    secondNumber();
 
     return firstNumber/secondNumber;
 }
@@ -139,5 +175,14 @@ if (operator = "+"){
 
 add()
 
+}
+ */
+
+
+// equal sign
+/* 
+operate(){
+
+    ifn
 }
  */
