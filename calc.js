@@ -140,38 +140,54 @@ function display(pig){
      return pig
 }
 
-let a = document.getElementById('result').value;
-
-let operation = document.getElementById('result').value;
-
-let b = document.getElementById('result').value;
 
 /* 
 let operator = ["+","-","*","/"] */
 
-secondNumber = document.getElementById('result').value;
+/* secondNumber = document.getElementById('result').value;
 
 function number_2(){
 
     secondNumber = document.getElementById('result').value;
 }
-
+ */
 //function to hold second variable
+ 
+ 
+/* 
+let operation = ["+","-","*","/"];
+ */
+/* let b = document.getElementById('result').value; */
+
+let plus = document.getElementById('plus').value;
+
+console.log(plus);
 
 
+function add(a,b,operation){
+    let answer = a + b;
+    for (let i= 0; i<operation.length ; i++){
+    if (operation === '+') 
+    return answer
+    document.getElementById('result').value = answer;
+    {
+        break
+    }
+}
+}
 
 
 
 function operate(){
-   /*  add(); */
+   add();
 
-    const calculator = (a, b, operation) => {
+   /*  const calculator = (a, b, operation) => {
         if (operation === '+') return a + b;
         if (operation === '-') return a - b;
         if (operation === '*') return a * b;
         if (operation === '/') return b === 0 ? "Can't divide by 0!" : a / b;
       }
-      
+       */
 }
 
 /* function add(firstNumber,secondNumber){
