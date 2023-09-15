@@ -138,6 +138,10 @@ operate(){
 function display(pig){
     document.getElementById('result').value += pig
     return pig
+
+    let piggy =  pig;
+
+    console.log(typeof piggy);
 }
 
 
@@ -259,5 +263,92 @@ let buttonList = document.querySelectorAll(".button");
     buttonList.forEach(function(i){
         i.addEventListener("click",function(e){
             console.log(e.target.value);
+            console.log(typeof e.target.value);
+
         })
     })
+
+    let buttonListOperator = document.querySelectorAll(".operator");
+    buttonListOperator.forEach(function(i){
+        i.addEventListener("click",function(e){
+            console.log(e.target.value);
+        })
+    })
+
+/* document.getElementById('.button') = a; */
+
+
+
+/* var el = document.getElementById("buttons");
+el.addEventListener("click", function(){alert("click1 triggered")}, false);
+el.addEventListener("click", function(){alert("click2 triggered")}, false)
+ */
+
+/* let btn = document.querySelector('#buttons');
+btn.addEventListener('click',method1);
+btn.addEventListener('click',method2);
+function method2(){
+  console.log();
+}
+function method1(){
+  console.log("Method 1");
+} */
+const obj = {};
+
+obj.prop = 123;
+console.log(obj);
+
+
+let a = document.getElementById('result').value;
+
+console.log(a);
+
+/* function calculate() {
+    // Get the values from the form elements
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+    let operation = document.getElementById("operation").value;
+    let result = 0;
+    // Check if the values are valid numbers and the operation is selected
+    if (!isNaN(num1) && !isNaN(num2) && operation != "") {
+      // Perform the calculation based on the operation
+      switch (operation) {
+        case "+":
+          result = num1 + num2;
+          break;
+        case "-":
+          result = num1 - num2;
+          break;
+        case "*":
+          result = num1 * num2;
+          break;
+        case "/":
+          // Check if the denominator is not zero
+          if (num2 != 0) {
+            result = num1 / num2;
+          } else {
+            // Display an error message
+            result = "Cannot divide by zero";
+          }
+          break;
+      }
+      // Display the result in the paragraph element
+      document.getElementById("result").innerHTML = "Result: " + result;
+    } else {
+      // Display an error message
+      document.getElementById("result").innerHTML = "Please enter valid numbers and select an operation";
+    }
+  }
+  // Attach the calculate function to the form events
+  document.getElementById("calculator").onchange = calculate;
+  document.getElementById("calculator").oninput = calculate;
+  document.getElementById("calculator").onsubmit = function (e) {
+    // Prevent the default form submission behavior
+    e.preventDefault();
+    // Call the calculate function
+    calculate();
+  };         */
+
+  let num1 = parseFloat(document.getElementById("num1"));
+
+  console.log(parseFloat(num1));
