@@ -210,6 +210,12 @@ let a = document.getElementById('result').value;
 
  */
 
+ function add(){
+
+    
+
+
+ }
 
 
 
@@ -272,6 +278,7 @@ let buttonList = document.querySelectorAll(".button");
     buttonListOperator.forEach(function(i){
         i.addEventListener("click",function(e){
             console.log(e.target.value);
+            console.log(typeof e.target.value);
         })
     })
 
@@ -301,7 +308,9 @@ console.log(obj);
 
 let a = document.getElementById('result').value;
 
-console.log(a);
+document.getElementById('result').value = a;
+
+console.log(a)
 
 /* function calculate() {
     // Get the values from the form elements
@@ -349,6 +358,24 @@ console.log(a);
     calculate();
   };         */
 
-  let num1 = parseFloat(document.getElementById("num1"));
+ /*  let num1 = parseFloat(document.getElementById("num1"));
 
-  console.log(parseFloat(num1));
+  console.log(parseFloat(num1)); */
+
+  function operate(){
+    let a = document.getElementById('result').value;
+
+    console.log(parseFloat(a));
+  } 
+
+  function calculate(){
+
+    if (value = "*"){
+      
+    } 
+
+    
+    
+  };
+
+ /* let y = calculate(x); */
