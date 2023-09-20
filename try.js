@@ -144,7 +144,88 @@ function display(pig){
     console.log(typeof piggy);
 }
 
+const operators = document.querySelectorAll('.operator');
+const equalsKey = document.querySelector('button equal-sign');
+/* const display = document.getElementById('result'); */
+const numbers = document.querySelectorAll('.button');
+/* const clear = document.getElementById('.result');  */
 
+let firstNumber;
+let currentOperator;
+let secondNumber;
+let tempArray = [];
+
+
+/* clear.addEventListener('click', function () {
+  display.textContent = '0';
+})
+ */
+numbers.forEach((number) => {
+  number.addEventListener('click', (e) => {
+      tempArray.push(e.target.value); // store value to temparray
+      console.log(tempArray);
+      display.innerHTML = Number(tempArray.join("")); // display number from array
+  });
+});
+
+ operators.forEach((operator) => {
+  operator.addEventListener('click', (e) => {
+      currentOperator = e.target.value; // store current operator
+      console.log(currentOperator);
+
+      firstNumber = Number(tempArray.join("")); // parse array to integers
+      console.log(firstNumber);
+      tempArray = []; // empty array
+  });
+});
+  
+
+function calculate() {
+  secondNumber = Number(tempArray.join(""));
+  let result = operate(parseFloat(firstNumber), parseFloat(secondNumber), currentOperator);
+ 
+ document.getElementById('result').value = result;
+
+}
+
+
+function add(firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
+}
+
+function subtract(firstNumber, secondNumber) {
+  return firstNumber - secondNumber;
+}
+
+function multiply(firstNumber, secondNumber) {
+  return firstNumber * secondNumber;
+}
+
+function divide(firstNumber, secondNumber) {
+  return firstNumber / secondNumber;
+}
+
+function operate(firstNumber, secondNumber, operator) {
+  switch (operator) {
+      case "+":
+          return add(firstNumber, secondNumber);
+      case "-":
+          return subtract(firstNumber, secondNumber);
+      case "*":
+          return multiply(firstNumber, secondNumber);
+      case "÷":
+          return divide(firstNumber, secondNumber);
+  }
+};
+
+function clearScreen(){
+
+  document.getElementById('result').value = ''
+
+}
+ 
+/* equalsKey.addEventListener('click', calculate()); */
+ 
 /* 
 let operator = ["+","-","*","/"] */
 
@@ -265,7 +346,7 @@ function operate(){
     add();
 }  
  */
-let buttonList = document.querySelectorAll(".button");
+/* let buttonList = document.querySelectorAll(".button");
     buttonList.forEach(function(i){
         i.addEventListener("click",function(e){
             console.log(e.target.value);
@@ -280,8 +361,8 @@ let buttonList = document.querySelectorAll(".button");
             console.log(e.target.value);
             console.log(typeof e.target.value);
         })
-    })
-
+    }) */
+ 
 /* document.getElementById('.button') = a; */
 
 
@@ -310,7 +391,7 @@ let a = document.getElementById('result').value;
 
 document.getElementById('result').value = a;
 
-console.log(a)
+console.log(a);
 
 /* function calculate() {
     // Get the values from the form elements
@@ -361,21 +442,9 @@ console.log(a)
  /*  let num1 = parseFloat(document.getElementById("num1"));
 
   console.log(parseFloat(num1)); */
-
+/* 
   function operate(){
     let a = document.getElementById('result').value;
 
     console.log(parseFloat(a));
-  } 
-
-  function calculate(){
-
-    if (value = "*"){
-      
-    } 
-
-    
-    
-  };
-
- /* let y = calculate(x); */
+   */

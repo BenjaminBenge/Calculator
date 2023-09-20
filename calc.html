@@ -30,7 +30,7 @@
 
             <td>
 
-                <input type='button' value = 'C' onclick="clearScreen()" class="clear"/>
+                <input type='button' id ='clear'  value = 'C' onclick="clearScreen()" class="clear"/>
 
             </td>
 
@@ -43,9 +43,9 @@
    
     
 
-   <input type="button" id="buttons"     value="8"  class="button "  onClick="display('8')"></input>
+   <input type="button" id="buttons"     value="7"  class="button "  onClick="display('8')"></input>
 
-    <input type="button" id="buttons"     value="9"  class="button"   onClick="display('9')"></input>
+    <input type="button" id="buttons"     value="8"  class="button"   onClick="display('9')"></input>
 
     <input type="button" id="buttons"     value="/"  class="operator" onClick="display('/')"></input>
 
@@ -69,7 +69,7 @@
 
     <input type="button" id="buttons"     value="."  class="button"   onClick="display('.')"></input>
 
-    <input type="button" id="buttons"     value= "=" class="button equal-sign" onClick="operate()"></input>
+    <input type="button" id="buttons"     value= "=" class="button equal-sign" onClick="calculate()"></input>
 
     <input type="button" id="buttons"     value="+"  class="operator" onClick="display('+')"></input>
 
@@ -83,23 +83,23 @@
 
 
 
-    
-<form id="calculator">
-  <label for="num1">Enter first number:</label>
+<!--     
+<form id="calculator"> -->
+<!--   <label for="num1">Enter first number:</label>
   <input type="number" id="num1" name="num1" required><br>
   <label for="num2">Enter second number:</label>
   <input type="number" id="num2" name="num2" required><br>
   <label for="operation">Select operation:</label>
-  <select id="operation" name="operation" required>
-    <option value="">Choose one</option>
+  <select id="operation" name="operation" required> -->
+<!--     <option value="">Choose one</option>
     <option value="+">Add</option>
     <option value="-">Subtract</option>
     <option value="*">Multiply</option>
     <option value="/">Divide</option>
-  </select><br>
-  <input type="submit" value="Calculate">
+  </select><br> -->
+ <!--  <input type="submit" value="Calculate">
 </form>         
-
+ -->
 </body>
 <!-- <script src="calc.js"></script> -->
 <script src="try.js"></script>
