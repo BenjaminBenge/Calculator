@@ -154,6 +154,16 @@ let firstNumber;
 let currentOperator;
 let secondNumber;
 let tempArray = [];
+let newNumber = result;
+console.log(result.value);
+let x;
+let b;
+
+x = 3;
+
+x=b;
+
+console.log(x);
 
 
 /* clear.addEventListener('click', function () {
@@ -175,16 +185,48 @@ numbers.forEach((number) => {
 
       firstNumber = Number(tempArray.join("")); // parse array to integers
       console.log(firstNumber);
+   /*    console.log(typeof firstNumber) */;
       tempArray = []; // empty array
   });
 });
   
+// Go through the array and identify if operators according to the order of 
+// BODMAS is present, and execute that operator for the operands left and right to it if found.
+function validateBODMAS(inputs){
+  let modifiedInputs = inputs
+  if(modifiedInputs.includes("÷")){
+    modifiedInputs = runOpp(modifiedInputs,"÷",divide)
+  } 
+  if (modifiedInputs.includes("*")){
+    modifiedInputs = runOpp(modifiedInputs,"*",multiply)
+  } 
+  if (modifiedInputs.includes("+")){
+    modifiedInputs = runOpp(modifiedInputs,"+",add)
+  } 
+  if (modifiedInputs.includes("-")){
+    modifiedInputs = runOpp(modifiedInputs,"-",subtract)
+  }
+  return modifiedInputs;
+}
+
+// Run the operator for all opperands next to a particular operator.
+// replace the result with operands and operator.
+function runOpp(inputarr,oppSymbol,oppCallback){
+  while(inputarr.includes(oppSymbol)){
+        const indexOpp = inputarr.indexOf(oppSymbol)
+        inputarr.splice(indexOpp - 1,3,oppCallback(Number(inputarr[indexOpp - 1]) , Number(inputarr[indexOpp + 1])))
+        console.log(inputarr)
+  }
+  return inputarr
+}
 
 function calculate() {
   secondNumber = Number(tempArray.join(""));
   let result = operate(parseFloat(firstNumber), parseFloat(secondNumber), currentOperator);
  
  document.getElementById('result').value = result;
+
+ console.log(result);
 
 }
 
@@ -217,6 +259,7 @@ function operate(firstNumber, secondNumber, operator) {
           return divide(firstNumber, secondNumber);
   }
 };
+console.log(result.value);
 
 function clearScreen(){
 
