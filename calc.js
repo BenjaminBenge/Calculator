@@ -201,3 +201,29 @@ function operate(){
 }
 
  */
+
+
+
+
+
+
+
+
+
+
+if ( secondNumber !== null){
+
+    console.log (solution);
+
+    document.getElementById('result').value = solution
+
+
+  }
+  else{
+
+  }
+
+    document.getElementById('result').value = ''
+  
+  
+  

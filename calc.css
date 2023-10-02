@@ -82,9 +82,14 @@
 
     color: #fff;
 
-    width: 80px;
+    width: 97px;
 
-    height: 30px;  
+    height: 60px;  
+   
+    margin-left: 144px;
+
+    
+
 
 }
 
@@ -120,9 +125,9 @@
 
     font-size: medium;
 
-    width: 50%;
+    width: 120%;
 
-    height: 30%;
+    height: 100%;
 
     cursor: default;
 
@@ -132,6 +137,8 @@
 
     margin: auto;
 
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+
+    margin-left: 10px;
 
 }
