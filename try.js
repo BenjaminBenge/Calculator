@@ -6,9 +6,6 @@ function display(pig){
     document.getElementById('result').value += pig
     return pig
 
-    let piggy =  pig;
-
-    console.log(typeof piggy);
 }
 
 const operators = document.querySelectorAll('.operator');
@@ -53,17 +50,7 @@ numbers.forEach((number) => {
    /*    show.push(e.target.value  !== "=" ? e.target.value : "")  */
       console.log(currentOperator);
 
-   /* 
-      countOperator = document.getElementById("operate");
-      countOperator.addEventListener("click", function() {
-         count++;
-         countOperator.innerHTML = count;
-         console.log(countOperator);
-      });
-        
-     */
-
-      
+   
       
 
       clear();
@@ -99,8 +86,6 @@ function calculate() {
 
   secondNumber = Number(tempArray.join(""));
 
-  number2 = Number(show.join(""));
-
   let newArray= [firstNumber,secondNumber]
 
 
@@ -124,24 +109,15 @@ function calculate() {
  console.log(show);
  show = [];
 
- /* solution = Number(show.join("")); //Parse arary to interger */ 
-/*  console.log(solution); */
+
 
  newNumber = result;
  console.log(newNumber);
  console.log(typeof newNumber);
 
-/*  show = []; */
 
-
-/*   if(secondNumber !== null)
-calculate();
-
-else  */
 
 }
-/* calculate(); */ /* 
- */
 
 
 
@@ -246,7 +222,7 @@ function clearScreen(){
 
   
   //calculate the result of the array
-  newArray = [firstNumber, secondNumber];
+ /*  newArray = [firstNumber, secondNumber];
 
   let Answer1 =  newArray[0] *  newArray[1];
   
@@ -254,4 +230,6 @@ function clearScreen(){
   console.log (Answer1);
 
   console.log(newArray);
+
+ */
 
